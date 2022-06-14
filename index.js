@@ -1,17 +1,13 @@
 // Code your solution here
 function findMatching(drivers, name) {
-    const matcher = drivers.filter(
-      (drivers) => drivers.toLowerCase() === name.toLowerCase()
-    );
-    return matcher;
+   return drivers.filter((driver)=>driver.toLowerCase()===name.toLowerCase());
   }
 
-  function fuzzyMatch(drivers, letters) {
-    const matching = drivers.filter((drivers) => drivers.startsWith(letters));
-    return matching;
+  function fuzzyMatch(drivers, name) {
+    return drivers.filter((driver)=>driver.slice(0,2) === name);
+    
   }
 
   function matchName(drivers, name) {
-    const matchy = drivers.filter((drivers) => drivers.name === name);
-    return matchy;
-  }
+    return drivers.filter((driver)=>driver.name === name);
+}
